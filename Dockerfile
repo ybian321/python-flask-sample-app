@@ -11,6 +11,8 @@ RUN pip install --editable .
 
 RUN flask init-db
 
+EXPOSE 5000
+
 CMD [ "flask", "run", "--host=0.0.0.0" ]
 
 
