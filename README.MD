@@ -27,3 +27,7 @@ and then in the new command promt run
 There is also a [codefresh.yml](codefresh.yml) for easy usage with the [Codefresh](codefresh.io) CI/CD platform.
 
 More details can be found in [Codefresh documentation](https://codefresh.io/docs/docs/getting-started/create-a-basic-pipeline/)
+
+## DevOps Demo
+- docker tag flaskr freefox1.jfrog.io/docker-devops/python-flask-sample-app:1.0.0
+- docker push freefox1.jfrog.io/docker-devops/python-flask-sample-app:1.0.0
