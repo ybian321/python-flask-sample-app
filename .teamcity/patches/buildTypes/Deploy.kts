@@ -16,6 +16,7 @@ create(DslContext.projectId, BuildType({
 
     params {
         param("artifactory_username", "gavin.tu@gmail.com")
+        password("artifactory_password", "credentialsJSON:914ce635-1fcd-4b78-a005-c69e57217036", display = ParameterDisplay.HIDDEN)
     }
 
     steps {
