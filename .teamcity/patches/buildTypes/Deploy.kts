@@ -14,6 +14,10 @@ create(DslContext.projectId, BuildType({
     id("Deploy")
     name = "Deploy"
 
+    params {
+        param("artifactory_username", "gavin.tu@gmail.com")
+    }
+
     steps {
         script {
             name = "DeployToK8s"
