@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <name>Gavin_PythonFlaskSampleApp Config DSL Script</name>
-  <groupId>Gavin_PythonFlaskSampleApp</groupId>
-  <artifactId>Gavin_PythonFlaskSampleApp_dsl</artifactId>
+  <name>_Root Config DSL Script</name>
+  <groupId>_Root</groupId>
+  <artifactId>_Root_dsl</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <parent>
@@ -22,7 +22,21 @@
     </repository>
     <repository>
       <id>teamcity-server</id>
-      <url>http://192.168.1.168:8111/app/dsl-plugins-repository</url>
+      <url>http://127.0.0.1:8111/app/dsl-plugins-repository</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>jfrog-server</id>
+      <url>http://13.239.84.133:8082/artifactory/kotlin-module/</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>maven-all</id>
+      <url>https://jcenter.bintray.com/</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
@@ -99,6 +113,17 @@
       <artifactId>kotlin-script-runtime</artifactId>
       <version>${kotlin.version}</version>
       <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>docker-build-publish</groupId>
+      <artifactId>docker-build-publish_dsl</artifactId>
+      <version>1.4-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+       <groupId>org.json</groupId>
+       <artifactId>json</artifactId>
+       <version>20180130</version>
     </dependency>
   </dependencies>
 </project>
