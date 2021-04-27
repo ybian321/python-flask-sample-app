@@ -18,7 +18,7 @@ create(DslContext.projectId, BuildType({
         script {
             name = "DeployToK8s"
             scriptContent = """
-                helm repo add helm-demo https://freefox1.jfrog.io/artifactory/helm --username "your artifactory username>" --password "your artifactory password"
+                helm repo add helm-demo https://freefox1.jfrog.io/artifactory/helm --username "your artifactory username" --password "your artifactory password"
                 helm repo update
                 helm upgrade --install python-flask-sample-app helm-demo/python-flask-sample-app
             """.trimIndent()
