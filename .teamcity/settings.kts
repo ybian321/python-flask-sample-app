@@ -40,10 +40,6 @@ project {
 
 object VCSExample : GitVcsRoot({
     name = "VCSExample"
-    url = "https://github.com/freefox-do/ython-flask-sample-app.git"
+    url = "https://github.com/ybian321/python-flask-sample-app.git"
     branch = "refs/heads/master"
-    authMethod = password {
-        userName = "capnash"
-        password = "d5bbe75793d3b650338fee279857bb1e90e8ea28"
-    }
 })
