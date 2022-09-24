@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "python-flask-sample-app.fullname" . }}
+  labels:
+    app: {{ template "python-flask-sample-app.name" . }}
+    chart: {{ template "python-flask-sample-app.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+spec:
+  type: {{ .Values.service.type }}
+  externalTrafficPolicy: Local
+  ports:
+    - port: {{ .Values.service.port }}
+      protocol: TCP
+      targetPort: 5000
+      name: http
+  selector:
+    app: {{ template "python-flask-sample-app.name" . }}
+    release: {{ .Release.Name }}
