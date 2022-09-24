@@ -1,0 +1,18 @@
+replicaCount: 1
+
+service:
+  type: LoadBalancer
+  port: 80
+
+image:
+  repository: nginx
+  tag: latest
+  pullPolicy: IfNotPresent
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 64Mi
+  requests:
+    cpu: 20m
+    memory: 8Mi

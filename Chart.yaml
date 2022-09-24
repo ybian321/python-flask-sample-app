@@ -1,0 +1,9 @@
+apiVersion: v1
+appVersion: 0.0.1
+description: A Helm chart for python-flask-sample-app-final
+name: python-flask-sample-app-final
+version: 0.0.1
+home: https://github.com/freefox-do/python-flask-sample-app
+maintainers:
+  - name: Bian
+    email: ybian321@gmail.com
